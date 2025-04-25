@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "../../styles/hero.module.css";
+import styles from "../../styles/modules/hero.module.css";
 import Lottie from "lottie-react";
 import devAnimation from "../../animation/dev.json";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -31,14 +31,7 @@ const Hero = () => {
             industry trends and advancements.
           </p>
           <div className={styles.ctaGroup}>
-           {/* <a href="#contact" className={styles.primaryCta}>
-              Start Project
-              <FiArrowUpRight className={styles.ctaIcon} />
-            </a>
-            <a href="#portfolio" className={styles.secondaryCta}>
-              View Portfolio
-            </a>
-           */}
+      
            <a href="#contact" className={styles.primaryCta}>
              <Buttom variations={"secondary1"} width={"full"}> Start Project
              <FiArrowUpRight className={styles.ctaIcon} />

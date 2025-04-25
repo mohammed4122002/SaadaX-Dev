@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../../styles/projects.module.css";
+import styles from "../../styles/modules/projects.module.css";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "../../utils/motion";
 import Image from "next/image";

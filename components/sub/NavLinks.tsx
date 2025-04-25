@@ -1,10 +1,12 @@
+import Link from "next/link";
 import { InavLink } from "../../interfaces";
 
-const NavLinks = ({ href, label, icon, className }: InavLink) => {
+const NavLinks = ({ href, label, icon, className, onClick  }: InavLink & {onClick :()=>void}) => {
   return (
-    <a className={className} href={href}>
+    <Link  className={className} href={href} onClick={onClick}>
       {icon}&nbsp;{label}
-    </a>
+    </Link>
+  
   );
 };
 

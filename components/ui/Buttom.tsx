@@ -1,5 +1,5 @@
 
-import styles from "../../styles/buttomUi.module.css"
+import styles from "../../styles/modules/buttomUi.module.css"
 
 interface ButtomProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
      children   : React.ReactNode;

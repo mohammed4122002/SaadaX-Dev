@@ -1,6 +1,6 @@
 //About.tsx
 'use client'
-import style from "../../styles/about.module.css";
+import style from "../../styles/modules/about.module.css";
 import Image from "next/image";
  import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "../../utils/motion";

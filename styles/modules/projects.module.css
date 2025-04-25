@@ -1,4 +1,3 @@
-
 .projectsSection {
   position: relative;
   padding: 8rem 2rem;
@@ -47,4 +46,21 @@
   margin: 0 auto;
   position: relative;
  
+}
+
+/* Applied color variables to the Projects section */
+.projects {
+  background-color: var(--color-card-bg);
+  color: var(--color-subtitle);
+}
+
+.project-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-card-border);
+  box-shadow: 0 4px 6px var(--color-card-shadow);
+}
+
+.project-card:hover {
+  border-color: var(--color-scroll);
+  box-shadow: 0 6px 8px var(--color-card-shadow);
 }

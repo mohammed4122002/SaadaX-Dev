@@ -1,5 +1,5 @@
 import { FiCode, FiExternalLink, FiGithub } from "react-icons/fi"
-import styles from "../../styles/card.module.css"
+import styles from "../../styles/modules/card.module.css"
 import Image from "next/image"
 import Link from "next/link"
 import Buttom from "../ui/Buttom"

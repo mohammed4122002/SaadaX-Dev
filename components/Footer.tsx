@@ -1,7 +1,7 @@
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
-import styles from "../../styles/footer.module.css";
+import styles from "../styles/modules/footer.module.css"
 import Link from "next/link";
-import Buttom from "../ui/Buttom";
+import Buttom from "./ui/Buttom";
 const Footer = () => {
   return (
     <footer className={styles.footer}>

@@ -1,5 +1,5 @@
  import { ISkill } from "../../interfaces";
-import styles from "../../styles/skillsCart.module.css";
+import styles from "../../styles/modules/skillsCart.module.css";
 import Image from "next/image";
 const SkillsCart = ({name , img}:ISkill) => {
     return (

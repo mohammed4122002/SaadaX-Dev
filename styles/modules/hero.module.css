@@ -1,0 +1,217 @@
+:root {
+  --color-white: #ffffff;
+  --color-light-purple: #7042f8;
+  --color-purple-shadow: #bf97ff3d;
+  --color-glow: rgba(100, 245, 255, 0.384);
+  --color-badge-bg: linear-gradient(180deg, rgba(60, 8, 126, 0) 0%, rgba(60, 8, 126, 0.32) 100%), rgba(113, 47, 255, 0.12);
+  --color-highlight: linear-gradient(120deg, #ff00dd, #ae00ff, #00c2ff);
+  --color-highlight-underline: linear-gradient(90deg, #ff00dd, #ae00ff, #00c2ff);
+  --color-subtitle: #8892b0;
+  --color-scroll: #ed64ff;
+  --color-scroll-border: #e064ff;
+
+  --font-title: 'Clash Display', sans-serif;
+  --font-size-title: 2.5rem;
+  --font-size-title-md: 2rem;
+  --font-size-title-sm: 1.8rem;
+  --font-size-subtitle: 1rem;
+  --font-size-subtitle-sm: 0.9rem;
+
+  --gap-large: 4rem;
+  --gap-medium: 2rem;
+  --gap-small: 1.5rem;
+}
+
+.heroSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: var(--gap-large) 2rem;
+  overflow: hidden;
+  color: var(--color-white);
+}
+
+.hero {
+  background: var(--color-highlight);
+  color: var(--color-white);
+}
+
+.hero-title {
+  font-family: var(--font-title);
+  font-size: var(--font-size-title);
+  background: var(--color-title-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-large);
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-medium);
+}
+
+.badge {
+  background: var(--color-badge-bg);
+  box-shadow: inset 0 0 12px var(--color-purple-shadow);
+  border: 1px solid #7042f88b;
+  backdrop-filter: blur(6px);
+  color: var(--color-light-purple);
+  border-radius: 50px;
+  padding: 0.8rem 1.8rem;
+  width: fit-content;
+  font-weight: 500;
+  box-shadow: 0 8px 32px rgba(0, 194, 255, 0.1);
+  animation: badgeFloat 3s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: var(--font-size-title);
+  line-height: 1.05;
+  color: var(--color-white);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+  position: relative;
+  color: transparent;
+  background-clip: text;
+  background-image: var(--color-highlight);
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-highlight-underline);
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-size: var(--font-size-subtitle);
+  color: var(--color-subtitle);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: var(--gap-small);
+}
+
+.ctaIcon {
+  font-size: 25px;
+  margin-right: 2px;
+}
+
+.animationWrapper {
+  position: relative;
+  max-width: 600px;
+}
+
+.animationGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, var(--color-glow) 0%, transparent 60%);
+  transform: translate(-50%, -50%);
+  filter: blur(60px);
+  z-index: -1;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouseWrapper {
+  width: 34px;
+  height: 56px;
+  border: 2px solid var(--color-scroll-border);
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mouse {
+  width: 6px;
+  height: 12px;
+  background: var(--color-scroll);
+  border-radius: 3px;
+  animation: scrollIndicator 2s infinite;
+}
+
+@keyframes scrollIndicator {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-10px); opacity: 0.5; }
+}
+
+/* -------------------- Responsive -------------------- */
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: var(--font-size-title-md);
+  }
+
+  .content {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .badge,
+  .ctaGroup {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .animationWrapper {
+    order: -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .scrollIndicator {
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--font-size-title-sm);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-subtitle-sm);
+  }
+}

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.7.4",
     "leaflet": "^1.9.4",

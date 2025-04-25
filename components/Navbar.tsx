@@ -1,23 +1,21 @@
-// components/Navbar/Navbar.tsx
+
 "use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { CiMenuFries } from "react-icons/ci";
-import { IoClose } from "react-icons/io5";
-import { NAVLINKS, SOCIALLINKS } from "../../data";
-import styles from "../../styles/navbar.module.css";
+import { NAVLINKS} from "../data";
+import styles from "../styles/modules/navbar.module.css";
 import {
   slideInFromLeft,
-  slideInFromRight,
   slideInFromTop,
-} from "../../utils/motion";
-import NavLinks from "../sub/NavLinks";
-import SocialIcons from "../sub/SocialIcons";
+} from "../utils/motion";
+import NavLinks from "./sub/NavLinks";
+import SocialIcons from "./sub/SocialIcons";
 import Link from "next/link";
-import { FiGithub, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
+  const [activeLink, setActiveLink] = useState("#home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
@@ -28,9 +26,14 @@ const Navbar = () => {
       href={link.href}
       label={link.label}
       icon={link.icon}
-      className={styles.navLink}
+      className={`${styles.navLink} ${activeLink === link.href ? styles.activeLink : ""}`}
+      onClick={() => {
+        setActiveLink(link.href);
+        setIsMenuOpen(false); // عشان نسكر القائمة على الموبايل
+      }}
     />
   ));
+  
 
   return (
     <motion.nav className={styles.navbar} initial="hidden" animate="visible">
@@ -50,13 +53,13 @@ const Navbar = () => {
             <a href="#" className={styles.socialLink}>
               <FiLinkedin />
             </a>
+            <a href="#" className={styles.socialLink}>
+              <FiMail />
+            </a>
           </div>
         </motion.div>
 
-        {/* <div className={styles.mobileToggle}>
-          <CiMenuFries className={styles.menuToggleIcon} onClick={toggleMenu} />
-        </div>
-          */}
+   
         <button className={styles.mobileToggle} onClick={toggleMenu}>
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -76,6 +79,9 @@ const Navbar = () => {
                   <a href="#" className={styles.socialLink}>
                     <FiLinkedin />
                   </a>
+                    <a href="#" className={styles.socialLink}>
+                                <FiMail />
+                              </a>
                 </div>
               </motion.div>
             </div>

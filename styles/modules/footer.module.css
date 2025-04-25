@@ -2,10 +2,19 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  color: #ffffff;
+  color: var(--color-subtitle);
   position: relative;
   z-index: 20;
- 
+  background-color: var(--color-card-bg);
+  border-top: 1px solid var(--color-card-border);
+}
+
+.footer a {
+  color: var(--color-scroll);
+}
+
+.footer a:hover {
+  color: var(--color-scroll-border);
 }
 
 .content{

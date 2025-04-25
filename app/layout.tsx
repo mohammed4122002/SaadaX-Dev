@@ -1,11 +1,11 @@
 //layout.tsx
 
-import Navbar from "@/components/main/Navbar";
+import Navbar from "@/components/Navbar";
 import "../styles/globals.css";
 import VideoBackground from "../components/VideoBackground";
-import Footer from "../components/main/Footer";
+import Footer from "../components/Footer";
 
-// تعريف البيانات الوصفية لتحسين SEO ومشاركة الوسائط الاجتماعية
+
 export const metadata = {
   title: "SaadaX - Mohammed Saada's Portfolio",
   description:
@@ -29,7 +29,6 @@ export const metadata = {
   },
 };
 
-// مكون التخطيط الجذري الذي يغلف جميع الصفحات
 export default function RootLayout({
   children,
 }: {

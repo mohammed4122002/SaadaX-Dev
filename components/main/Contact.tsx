@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../../styles/contact.module.css";
+import styles from "../../styles/modules/contact.module.css";
 import Lottie from "lottie-react";
 import contactAnimation from "../../animation/contact.json";
 import { motion } from "framer-motion";
