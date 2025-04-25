@@ -1,0 +1,149 @@
+
+
+.section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .section{
+    text-align: center;
+    padding: auto 1rem;
+    grid-template-columns: 1fr ;
+  }
+}
+.leftSide {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.header h2 span {
+  color: transparent;
+  background: linear-gradient(120deg, #64ffda, #00c2ff);
+  background-clip: text;
+}
+.subtitle {
+  font-size: 1.1rem;
+  color: #8892b0;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+.form {
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.inputGroup {
+  position: relative;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 8px;
+  color: #c6ece3bd;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.inputGroup label {
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  color: #8892b0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus ~ label,
+.inputGroup input:valid ~ label,
+.inputGroup textarea:focus ~ label,
+.inputGroup textarea:valid ~ label {
+  top: -1.2rem;
+  left: 0.8rem;
+  font-size: 0.9rem;
+  color: #64ffdbbd;
+}
+
+.inputBorder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #64ffdbbb, #d400ff); 
+  transition: width 0.4s ease;
+}
+
+.inputGroup input:focus ~ .inputBorder,
+.inputGroup textarea:focus ~ .inputBorder {
+  width: 100%;
+}
+
+
+.icon {
+ margin-left: 6px;
+  font-size: 1.2rem;
+}
+
+.rightSide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.animationContainer {
+  width: 100%;
+  max-width: 450px;
+ 
+}
+.locationCard {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  margin-top: 3rem;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  transition: all 0.3s ease;
+}
+
+.locationCard:hover {
+  background: rgba(100, 255, 218, 0.05);
+  transform: translateY(-5px);
+}
+.pinIcon {
+  font-size: 2rem;
+  color: #64ffda;
+}
+.locationText h4 {
+ 
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.locationText p {
+
+  color: #8892b0;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,50 @@
+
+.projectsSection {
+  position: relative;
+  padding: 8rem 2rem;
+  color: #ffffff;
+}
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+}
+.sectionTitle {
+  font-size: 3rem;
+  font-family: 'Clash Display', sans-serif;
+  color: transparent;
+  background-clip: text;
+  background-image:linear-gradient(45deg, #fff 30%, #a78bfa 70%);
+  margin-bottom: 1rem;
+}
+.titleAccent {
+  color: transparent;
+  background-clip: text;
+  background-image:linear-gradient(120deg,#ff00dd, #ae00ff, #00c2ff);
+  position: relative;
+}
+.titleAccent::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #ec4899, #06b6d4);
+  border-radius: 2px;
+}
+.sectionSubtitle {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  letter-spacing: 0.1em;
+}
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+ 
+}
