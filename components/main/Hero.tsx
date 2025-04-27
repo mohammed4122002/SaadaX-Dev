@@ -5,7 +5,7 @@ import styles from "../../styles/modules/hero.module.css";
 import Lottie from "lottie-react";
 import devAnimation from "../../animation/dev.json";
 import { FiArrowUpRight, FiBriefcase, FiSend } from "react-icons/fi";
-import Buttom from "../ui/Buttom";
+import Button from "../common/Button";
 
 const Hero = () => {
   return (
@@ -33,17 +33,17 @@ const Hero = () => {
 
           <div className={styles.ctaGroup}>
             <a href="#contact" className={styles.primaryCta}>
-              <Buttom variations="secondary1" width="full">
+              <Button variant="secondary1" width="full">
                <span> Start Projects  </span>
                 <FiSend className={styles.ctaIcon} />
-              </Buttom>
+              </Button>
             </a>
 
             <a href="#portfolio" className={styles.secondaryCta}>
-              <Buttom width="full" variations="secondary2" >
+              <Button width="full" variant="secondary2" >
                <span>View Portfolio </span> 
                 <FiBriefcase className={styles.ctaIcon} />
-              </Buttom>
+              </Button>
             </a>
           </div>
         </div>

@@ -2,7 +2,8 @@ import { FiCode, FiExternalLink, FiGithub } from "react-icons/fi";
 import styles from "../../styles/modules/card.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Buttom from "../ui/Buttom";
+import Button from "../common/Button";
+
 interface IProps {
   project: {
     title: string;
@@ -45,17 +46,16 @@ const card = ({ project }: IProps) => {
 
         <div className={styles.actionButtons}>
           <Link href={project.demoLink} className={styles.demoButton}>
-            <Buttom variations={"secondary1"}>
-              {" "}
+            <Button variant={"secondary1"}>
               <FiExternalLink />
               Live Demo
-            </Buttom>
+            </Button>
           </Link>
           <Link href={project.githubLink} className={styles.codeButton}>
-            <Buttom variations={"secondary2"}>
+            <Button variant={"secondary2"}>
               <FiGithub />
               Source Code
-            </Buttom>
+            </Button>
           </Link>
         </div>
       </div>

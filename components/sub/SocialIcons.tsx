@@ -1,6 +1,5 @@
-
-import { IScialLink } from "../../interfaces";
-const SocialIcons = ({ href, icon, className }: IScialLink) => {
+import { ISocialLink } from "../../interfaces";
+const SocialIcons = ({ href, icon, className }: ISocialLink) => {
   return (
     <a href={href} target="_blank" className={className}>
       {icon}

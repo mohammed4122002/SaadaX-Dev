@@ -9,7 +9,7 @@ import NavLinks from "./sub/NavLinks";
 import Link from "next/link";
 import { FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from "react-icons/fi";
 import SocialIcons from "./sub/SocialIcons";
-import { IScialLink } from "@/interfaces";
+import { ISocialLink } from "@/interfaces";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("#home");
@@ -28,12 +28,12 @@ const Navbar = () => {
       }`}
       onClick={() => {
         setActiveLink(link.href);
-        setIsMenuOpen(false); // عشان نسكر القائمة على الموبايل
+        setIsMenuOpen(false);
       }}
     />
   ));
 
-  const RenderSocialLink = SOCIALLINKS.map((social: IScialLink, idx) => (
+  const RenderSocialLink = SOCIALLINKS.map((social: ISocialLink, idx) => (
     <SocialIcons
       key={idx}
       href={social.href}

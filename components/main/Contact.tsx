@@ -4,7 +4,7 @@ import styles from "../../styles/modules/contact.module.css";
 import Lottie from "lottie-react";
 import contactAnimation from "../../animation/contact.json";
 import { FiSend, FiMapPin } from "react-icons/fi";
-import Buttom from "../ui/Buttom";
+import Button from "../common/Button";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Contact = () => {
@@ -39,7 +39,7 @@ const Contact = () => {
             <label>Your Vision</label>
             <span className={styles.inputBorder}></span>
           </div>
-          <Buttom width="full" >Send Message <FiSend className={styles.icon} /> </Buttom>
+          <Button width="full" >Send Message <FiSend className={styles.icon} /> </Button>
         </form>
       </div>
 

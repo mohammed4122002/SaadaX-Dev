@@ -1,0 +1,120 @@
+.blogListSection {
+  position: relative;
+  padding: 6rem 1rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 50;
+}
+
+.title {
+  font-size: 2.7rem;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  color: #7042f8;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.blogList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.blogCard {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(112,66,248,0.13);
+  overflow: hidden;
+  width: 340px;
+  text-decoration: none;
+  color: #222;
+  transition: box-shadow 0.28s, transform 0.22s;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.blogCard:hover {
+  box-shadow: 0 16px 40px rgba(112,66,248,0.22), 0 2px 8px #b97aff33;
+  transform: translateY(-10px) scale(1.045);
+}
+
+.blogImage {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 2px 12px #eee;
+  transition: box-shadow 0.2s, transform 0.25s;
+}
+
+.blogCard:hover .blogImage {
+  box-shadow: 0 8px 32px #b97aff33;
+  transform: scale(1.06);
+}
+
+.blogCardContent {
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex: 1;
+}
+
+.blogCardContent h2 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #7042f8;
+  margin: 0 0 0.3rem 0;
+  letter-spacing: 0.01em;
+}
+
+.blogCardContent p {
+  color: #444;
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.date {
+  color: #fff;
+  background: #7042f8;
+  font-size: 0.98rem;
+  margin-top: 0.2rem;
+  padding: 0.2rem 0.9rem;
+  border-radius: 999px;
+  align-self: flex-start;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #b97aff33;
+}
+
+.readMoreBtn {
+  margin-top: 1.1rem;
+  align-self: flex-end;
+  background: linear-gradient(90deg, #7042f8 0%, #b97aff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #b97aff33;
+  transition: background 0.2s, transform 0.18s;
+}
+.readMoreBtn:hover {
+  background: linear-gradient(90deg, #b97aff 0%, #7042f8 100%);
+  transform: scale(1.07);
+}
+
+@media (max-width: 600px) {
+  .blogCard {
+    width: 100%;
+    min-width: 0;
+  }
+  .blogList {
+    gap: 1.2rem;
+  }
+} 

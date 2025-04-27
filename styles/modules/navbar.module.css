@@ -3,23 +3,23 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--bg-overlay);
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 4px 6px var(--shadow-light);
-  transition: var(--transition);
-  color: var(--color-text-primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  color: #e0e0e0;
 }
 
 .navbar a {
-  color: var(--color-text-accent);
+  color: #ff00dd;
   text-decoration: none;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-  color: var(--color-accent);
-  text-shadow: 0 0 8px var(--glow-effect);
+  color: #00c2ff;
+  text-shadow: 0 0 10px rgba(0, 194, 255, 0.5);
 }
 
 .container {
@@ -32,9 +32,9 @@
 }
 
 .logo a {
-  font-size:x-large;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: #ffffff;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -43,52 +43,51 @@
 .navbarLogoHighlight {
   color: transparent;
   background-clip: text;
-  background-image: var(--gradient-accent);
+  background-image: linear-gradient(90deg, #ff00dd, #00c2ff);
 }
 
 .desktopMenu {
   display: flex;
   align-items: center;
-  gap: 2;
- 
+  gap: 2rem;
 }
 
 .navLink {
-  color: var(--color-text-secondary);
+  color: #b0b0b0;
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-bottom: 2px solid transparent;
-  border-radius: var(--border-radius);
-  transition: var(--transition);
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .navLink:hover {
-  color: var(--color-text-primary);
-  border-bottom: 1px solid var(--color-accent);
-  background: var(--bg-secondary);
+  color: #ffffff;
+  border-bottom: 2px solid #ff00dd;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .socials {
   display: flex;
-  gap: var(--gap-small);
+  gap: 1.5rem;
 }
 
 .socialLink {
-  font-size: 1.5rem;
-  color: var(--color-primary);
-  transition: var(--transition);
+  font-size: 1.7rem;
+  color: #ff00dd;
+  transition: all 0.3s ease;
 }
 
 .socialLink:hover {
-  color: var(--color-secondary);
-  transform: translateY(-2px);
+  color: #00c2ff;
+  transform: translateY(-3px);
 }
 
 .mobileToggle {
   display: none;
   background: none;
   border: none;
-  color: var(--color-text-primary);
+  color: #ffffff;
   font-size: 2rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -96,7 +95,7 @@
 }
 
 .mobileMenuOverlay {
-  background: var(--bg-overlay);
+  background: rgba(30, 41, 59, 0.9);
   backdrop-filter: blur(40px);
   position: fixed;
   top: 0;
@@ -106,22 +105,19 @@
   z-index: 100;
   width: 100vw;
   height: 100vh;
- 
 }
 
 .mobileMenu {
-  background: var(--bg-secondary);
+  background: rgba(15, 23, 42, 0.9);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 10vh;
-  left: 50;
-  transform: translateX(-50%);
   width: 90%;
   padding: 2rem;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 970px) {
@@ -145,18 +141,9 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
 .activeLink {
-  color: var(--color-text-primary);
-  border-bottom: 1px solid var(--color-accent);
-  background: var(--bg-secondary);
-  text-shadow: 0 0 8px var(--glow-effect);
+  color: #ffffff;
+  border-bottom: 2px solid #ff00dd;
+  background: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 10px rgba(255, 0, 221, 0.5);
 }

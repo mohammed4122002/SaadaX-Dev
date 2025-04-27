@@ -1,14 +1,14 @@
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import styles from "../styles/modules/footer.module.css";
 import Link from "next/link";
-import Buttom from "./ui/Buttom";
+import Button from "./common/Button";
 
 import SocialIcons from "./sub/SocialIcons";
-import { IScialLink } from "@/interfaces";
+import { ISocialLink } from "@/interfaces";
 import { NAVLINKS, SOCIALLINKS } from "@/data";
 import NavLinks from "./sub/NavLinks";
 const Footer = () => {
-  const RenderSocialLink = SOCIALLINKS.map((social: IScialLink, idx) => (
+  const RenderSocialLink = SOCIALLINKS.map((social: ISocialLink, idx) => (
     <SocialIcons
       key={idx}
       href={social.href}
@@ -46,7 +46,7 @@ const Footer = () => {
               placeholder="Enter your email"
               className={styles.input}
             />
-            <Buttom>Subscribe</Buttom>
+            <Button>Subscribe</Button>
           </form>
         </div>
       </div>

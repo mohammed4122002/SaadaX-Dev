@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "../../utils/motion";
 import { SKILLS } from "../../data/index";
 import SkillsCart from "../sub/SkillsCart";
-import Buttom from "../ui/Buttom";
+import Button from "../common/Button";
 
 const About = () => {
   const duplicatedSkills = [...SKILLS, ...SKILLS];
@@ -43,7 +43,7 @@ const About = () => {
             download
             className={styles.downloadBtn}
           >
-            <Buttom variations={"secondary1"}>Download CV</Buttom>
+            <Button variant={"secondary1"}>Download CV</Button>
           </a>
         </div>
       </div>
