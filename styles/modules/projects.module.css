@@ -1,27 +1,32 @@
+
 .projectsSection {
   position: relative;
-  padding: 8rem 2rem;
-  color: #ffffff;
+  padding: var(--gap-large) 2rem;
+  color: var(--color-text-primary);
+ 
 }
+
 .header {
   text-align: center;
-  margin-bottom: 3rem;
-
+  margin-bottom: var(--gap-large);
 }
+
 .sectionTitle {
-  font-size: 3rem;
-  font-family: 'Clash Display', sans-serif;
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: var(--gap-small);
   color: transparent;
   background-clip: text;
-  background-image:linear-gradient(45deg, #fff 30%, #a78bfa 70%);
-  margin-bottom: 1rem;
+  background-image: var(--gradient-primary);
 }
+
 .titleAccent {
   color: transparent;
   background-clip: text;
-  background-image:linear-gradient(120deg,#ff00dd, #ae00ff, #00c2ff);
+  background-image: var( --gradient-tech);
   position: relative;
 }
+
 .titleAccent::after {
   content: '';
   position: absolute;
@@ -30,37 +35,42 @@
   transform: translateX(-50%);
   width: 80%;
   height: 3px;
-  background: linear-gradient(90deg, #ec4899, #06b6d4);
+  background: var(--gradient-tech);
   border-radius: 2px;
 }
+
 .sectionSubtitle {
-  font-size: 1.25rem;
-  color: #94a3b8;
+  font-size: var(--font-size-subtitle);
+  color: var(--color-text-secondary);
   letter-spacing: 0.1em;
 }
+
 .projectsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: var(--gap-medium);
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
- 
+  place-items:center ;
+  place-content: center;
 }
 
 /* Applied color variables to the Projects section */
 .projects {
-  background-color: var(--color-card-bg);
-  color: var(--color-subtitle);
+  background-color: var(--bg-secondary);
+  color: var(--color-text-secondary);
 }
 
 .project-card {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-card-border);
-  box-shadow: 0 4px 6px var(--color-card-shadow);
+  background: var(--bg-primary);
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: 0 4px 6px var(--shadow-dark);
+  transition: var(--transition);
 }
 
 .project-card:hover {
   border-color: var(--color-scroll);
-  box-shadow: 0 6px 8px var(--color-card-shadow);
+  box-shadow: 0 6px 8px var(--shadow-light);
+  transform: translateY(-5px);
 }

@@ -3,9 +3,9 @@
 import styles from "../../styles/modules/contact.module.css";
 import Lottie from "lottie-react";
 import contactAnimation from "../../animation/contact.json";
-import { motion } from "framer-motion";
 import { FiSend, FiMapPin } from "react-icons/fi";
 import Buttom from "../ui/Buttom";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Contact = () => {
   return (
@@ -39,21 +39,23 @@ const Contact = () => {
             <label>Your Vision</label>
             <span className={styles.inputBorder}></span>
           </div>
-    {/*
-          <button className={styles.submitButton}>
-            Send Message <FiSend className={styles.icon} />
-          </button>
-          */}
           <Buttom width="full" >Send Message <FiSend className={styles.icon} /> </Buttom>
         </form>
       </div>
 
       <div className={styles.rightSide}>
         <div className={styles.animationContainer}>
-          <Lottie
+        {/*  <Lottie
             animationData={contactAnimation}
           
           />
+          */}
+           <DotLottieReact
+      src="https://lottie.host/06c453ba-5ea5-4b93-9571-a47cda195744/E1pzMlU22O.lottie"
+      loop
+      autoplay
+      style={{ width: '400px', height: '400px' }}
+    />
         </div>
         <div className={styles.locationCard}>
           <div className={styles.pinIcon}>
@@ -69,4 +71,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact ;

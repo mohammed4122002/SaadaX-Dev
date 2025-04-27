@@ -1,18 +1,15 @@
-
 "use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { NAVLINKS} from "../data";
+import { NAVLINKS, SOCIALLINKS } from "../data";
 import styles from "../styles/modules/navbar.module.css";
-import {
-  slideInFromLeft,
-  slideInFromTop,
-} from "../utils/motion";
+import { slideInFromLeft, slideInFromTop } from "../utils/motion";
 import NavLinks from "./sub/NavLinks";
-import SocialIcons from "./sub/SocialIcons";
 import Link from "next/link";
 import { FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from "react-icons/fi";
+import SocialIcons from "./sub/SocialIcons";
+import { IScialLink } from "@/interfaces";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("#home");
@@ -26,15 +23,24 @@ const Navbar = () => {
       href={link.href}
       label={link.label}
       icon={link.icon}
-      className={`${styles.navLink} ${activeLink === link.href ? styles.activeLink : ""}`}
+      className={`${styles.navLink} ${
+        activeLink === link.href ? styles.activeLink : ""
+      }`}
       onClick={() => {
         setActiveLink(link.href);
         setIsMenuOpen(false); // عشان نسكر القائمة على الموبايل
       }}
     />
   ));
-  
 
+  const RenderSocialLink = SOCIALLINKS.map((social: IScialLink, idx) => (
+    <SocialIcons
+      key={idx}
+      href={social.href}
+      icon={social.icon}
+      className={styles.socialLink}
+    />
+  ));
   return (
     <motion.nav className={styles.navbar} initial="hidden" animate="visible">
       <div className={styles.container}>
@@ -46,20 +52,9 @@ const Navbar = () => {
 
         <motion.div className={styles.desktopMenu} variants={slideInFromTop}>
           {RenderNavLink}
-          <div className={styles.socials}>
-            <a href="#" className={styles.socialLink}>
-              <FiGithub />
-            </a>
-            <a href="#" className={styles.socialLink}>
-              <FiLinkedin />
-            </a>
-            <a href="#" className={styles.socialLink}>
-              <FiMail />
-            </a>
-          </div>
+          <div className={styles.socials}>{RenderSocialLink}</div>
         </motion.div>
 
-   
         <button className={styles.mobileToggle} onClick={toggleMenu}>
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -72,17 +67,7 @@ const Navbar = () => {
                 variants={slideInFromTop}
               >
                 {RenderNavLink}
-                <div className={styles.socials}>
-                  <a href="#" className={styles.socialLink}>
-                    <FiGithub />
-                  </a>
-                  <a href="#" className={styles.socialLink}>
-                    <FiLinkedin />
-                  </a>
-                    <a href="#" className={styles.socialLink}>
-                                <FiMail />
-                              </a>
-                </div>
+                <div className={styles.socials}>{RenderSocialLink}</div>
               </motion.div>
             </div>
           </div>

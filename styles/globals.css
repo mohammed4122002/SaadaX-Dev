@@ -11,7 +11,7 @@
   
   /* التدرجات اللونية */
   --gradient-primary: linear-gradient(120deg, var(--color-primary), #9e00ff);
-  --gradient-accent: linear-gradient(120deg, var(--color-accent), #ae00ff);
+  --gradient-accent: linear-gradient(180deg, var(--color-accent), #ae00ff);
   --gradient-tech: linear-gradient(45deg, #ec4899, #06b6d4);
   
   /* الظلال والتأثيرات */
@@ -31,8 +31,8 @@
   
   /* الخلفيات */
   --bg-primary: rgba(30, 41, 59, 0.6);
-  --bg-secondary: rgba(113, 47, 255, 0.274);
-  --bg-overlay: linear-gradient(180deg, rgba(15, 23, 42, 0.192) 40%, #0f172a 100%);
+  --bg-secondary: rgba(156, 1, 156, 0.075);
+  --bg-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 40%, #0f172a 100%);
   
   /* الخطوط */
   --font-title: 'Clash Display', sans-serif;
@@ -120,5 +120,16 @@ section {
 ul {
   list-style: none;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 

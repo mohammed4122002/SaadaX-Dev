@@ -1,3 +1,4 @@
+import { FiMail } from "react-icons/fi";
 import { InavLink, IScialLink } from "../interfaces";
 import { FaHome, FaUserAlt, FaLaptopCode, FaEnvelope, FaBlog, FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 
@@ -12,7 +13,7 @@ export const NAVLINKS: InavLink[] = [
 export const SOCIALLINKS: IScialLink[] = [ 
     { href: "https://www.linkedin.com/in/mohammed-abu-saada-858159265", icon: <FaLinkedin/>  },
     { href: "https://github.com/mohammed4122002", icon: <FaGithub/>  },
-    { href: "https://wa.me/970594848203", icon: <FaWhatsapp/>  },
+    { href: "mohammedsaadaang@gmail.com", icon:  <FiMail /> },
 ];
 
 
@@ -67,3 +68,25 @@ export const SKILLS = [
     },
   ];
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /******************************************** */
+
+
+
