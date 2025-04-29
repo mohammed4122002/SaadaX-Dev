@@ -1,15 +1,20 @@
 .navbar {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 10;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  height: fit-content;
   z-index: 1000;
-  background: linear-gradient(180deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.233), rgba(15, 23, 42, 0.274));
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
   color: #e0e0e0;
 }
+
 
 .navbar a {
   color: #ff00dd;
@@ -121,16 +126,26 @@
 }
 
 @media (max-width: 970px) {
+  .navbar{
+    width: 95%;
+    .logo a{
+      font-size: 25px;
+    }
+  }
   .desktopMenu {
     display: none;
   }
 
   .mobileToggle {
+  
     display: block;
+    font-size: 20px;
   }
 
   .mobileMenu {
+   
     display: flex;
+  
   }
 
   .navLink {

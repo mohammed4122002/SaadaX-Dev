@@ -23,6 +23,14 @@ const About = () => {
             height={300}
             className={styles.img}
           />
+          <Image
+            src="/pngwing.com.png"
+            alt="my image"
+            width={35}
+            height={35}
+            className={styles.react}
+          />
+          
         </div>
         <div className={styles.contentRight}>
           <h2 className={styles.heading}>About Me</h2>

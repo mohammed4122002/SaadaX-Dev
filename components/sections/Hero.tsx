@@ -25,8 +25,8 @@ const Hero = () => {
           </h1>
           <p className={styles.subtitle}>
             I'm <strong>Mohamed</strong>, a{" "}
-            <span className={styles.highlight}> Frontend Developer </span>  with 2+ years of experience in{" "}
-            <span className={styles.highlight}> Next.js </span>  development. Proficient in utilizing cutting-edge development tools
+            <strong className={styles.highlight}> Frontend Developer </strong>  with 2+ years of experience in{" "}
+            <strong className={styles.highlight}> Next.js </strong>  development. Proficient in utilizing cutting-edge development tools
             and procedures to deliver high-quality results. Committed to
             delivering exceptional code quality and staying updated with
             industry trends and advancements.

@@ -51,3 +51,9 @@
 .skillItem:hover .icon {
   transform: rotate(-12deg) scale(1.15);
 }
+@media (max-width: 768px) {
+  .skillItem{
+    gap: 0.7rem;
+    padding: 0.4rem 1rem;
+  }
+}
