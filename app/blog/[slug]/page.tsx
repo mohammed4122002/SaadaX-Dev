@@ -4,23 +4,14 @@ import styles from "../../../styles/modules/blogPost.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default async function BlogPostPage({ params }: PageProps) {
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const { slug } = params;
-
-  interface BlogPostMeta {
-    title: string;
-    date: string;
-    image: string;
-    contentHtml: string | TrustedHTML;
-  }
-
-  const post: BlogPostMeta = await getPostBySlug(slug);
+  
+  const post = await getPostBySlug(slug);
 
   if (!post) return notFound();
 

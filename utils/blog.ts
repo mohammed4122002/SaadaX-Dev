@@ -14,6 +14,10 @@ export interface BlogPostMeta {
   image: string;
 }
 
+export interface BlogPost extends BlogPostMeta {
+  contentHtml: string;
+}
+
 export function getAllPosts(): BlogPostMeta[] {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
@@ -21,6 +25,7 @@ export function getAllPosts(): BlogPostMeta[] {
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
+    
     return {
       slug,
       title: data.title,
@@ -31,15 +36,25 @@ export function getAllPosts(): BlogPostMeta[] {
   });
 }
 
-export async function getPostBySlug(slug: string) {
+export async function getPostBySlug(slug: string): Promise<BlogPost> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
+  
+  if (!fs.existsSync(fullPath)) {
+    throw new Error(`Post with slug "${slug}" not found.`);
+  }
+
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
+  
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
+
   return {
     slug,
-    ...data,
+    title: data.title,
+    summary: data.summary,
+    date: data.date,
+    image: data.image,
     contentHtml,
   };
-} 
+}
