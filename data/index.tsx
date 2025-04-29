@@ -1,5 +1,5 @@
 import { FiMail } from "react-icons/fi";
-import { InavLink, ISocialLink } from "../interfaces";
+import { InavLink, ISocialLink } from "../types";
 import { FaHome, FaUserAlt, FaLaptopCode, FaEnvelope, FaBlog, FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 
 export const NAVLINKS: InavLink[] = [
