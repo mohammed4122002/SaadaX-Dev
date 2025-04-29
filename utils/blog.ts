@@ -6,55 +6,64 @@ import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'data/blog-posts');
 
-export interface BlogPostMeta {
+export type BlogPostMeta = {
   slug: string;
   title: string;
-  summary: string;
   date: string;
   image: string;
-}
+  summary: string;
+};
 
-export interface BlogPost extends BlogPostMeta {
+export type BlogPost = BlogPostMeta & {
   contentHtml: string;
-}
+};
 
 export function getAllPosts(): BlogPostMeta[] {
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, '');
-    const fullPath = path.join(postsDirectory, fileName);
+  try {
+    return fs.readdirSync(postsDirectory)
+      .filter(file => file.endsWith('.md'))
+      .map(file => {
+        const slug = file.replace(/\.md$/, '');
+        const fullPath = path.join(postsDirectory, file);
+        const { data } = matter(fs.readFileSync(fullPath, 'utf8'));
+        
+        return {
+          slug,
+          title: data.title,
+          date: data.date,
+          image: data.image,
+          summary: data.summary,
+        };
+      });
+  } catch (error) {
+    console.error('Error reading posts:', error);
+    return [];
+  }
+}
+
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  try {
+    const fullPath = path.join(postsDirectory, `${slug}.md`);
+    
+    if (!fs.existsSync(fullPath)) return null;
+
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data } = matter(fileContents);
+    const { data, content } = matter(fileContents);
+    
+    const processedContent = await remark()
+      .use(html)
+      .process(content);
     
     return {
       slug,
       title: data.title,
-      summary: data.summary,
       date: data.date,
       image: data.image,
+      summary: data.summary,
+      contentHtml: processedContent.toString(),
     };
-  });
-}
-
-export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-  const fullPath = path.join(postsDirectory, `${slug}.md`);
-  
-  if (!fs.existsSync(fullPath)) {
+  } catch (error) {
+    console.error(`Error loading post ${slug}:`, error);
     return null;
   }
-
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
-  
-  const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
-
-  return {
-    slug,
-    title: data.title,
-    summary: data.summary,
-    date: data.date,
-    image: data.image,
-    contentHtml,
-  };
 }

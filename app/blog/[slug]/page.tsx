@@ -9,11 +9,9 @@ export default async function BlogPostPage({
 }: {
   params: { slug: string };
 }) {
-  const { slug } = params;
-  
-  const post = await getPostBySlug(slug);
+  const post = await getPostBySlug(params.slug);
 
-  if (!post) return notFound();
+  if (!post) notFound();
 
   return (
     <article className={styles.blogPost}>
@@ -24,12 +22,12 @@ export default async function BlogPostPage({
       <Image
         src={post.image}
         alt={post.title}
-        className={styles.blogImage}
         width={600}
         height={320}
-        priority={false}
+        className={styles.blogImage}
+        priority
       />
-      <span className={styles.date}>{post.date}</span>
+      <span className={styles.date}>{new Date(post.date).toLocaleDateString()}</span>
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
