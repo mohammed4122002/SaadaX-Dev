@@ -1,18 +1,21 @@
 "use client";
 
-import { motion } from "framer-motion";
 import styles from "../../styles/modules/hero.module.css";
-import Lottie from "lottie-react";
-import devAnimation from "../../animation/dev.json";
-import { FiArrowUpRight, FiBriefcase, FiSend } from "react-icons/fi";
-import Button from "../common/Button";
+import dynamic from "next/dynamic";
+import {  FiBriefcase, FiSend } from "react-icons/fi";
+import Button from "../ui/Button";
+import devAnimation from "../../data/dev.json";
+import Link from "next/link";
+
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const Hero = () => {
   return (
-    <section className={styles.heroSection}>
+    <section className={styles.heroSection} id="home">
       <div className={styles.content}>
         <div className={styles.textContent}>
-          <div className={styles.badge}>
+          <div className={styles.badge} >
             <span>🌟 Frontend Visionary</span>
           </div>
           <h1 className={styles.title}>
@@ -22,29 +25,27 @@ const Hero = () => {
           </h1>
           <p className={styles.subtitle}>
             I'm <strong>Mohamed</strong>, a{" "}
-            <span className={styles.highlight}> Frontend Developer </span>
-            with 2+ years of experience in{" "}
-            <span className={styles.highlight}> Next.js </span>
-            development. Proficient in utilizing cutting-edge development tools
+            <span className={styles.highlight}> Frontend Developer </span>  with 2+ years of experience in{" "}
+            <span className={styles.highlight}> Next.js </span>  development. Proficient in utilizing cutting-edge development tools
             and procedures to deliver high-quality results. Committed to
             delivering exceptional code quality and staying updated with
             industry trends and advancements.
           </p>
 
           <div className={styles.ctaGroup}>
-            <a href="#contact" className={styles.primaryCta}>
+            <Link href="#contact" className={styles.primaryCta}>
               <Button variant="secondary1" width="full">
                <span> Start Projects  </span>
                 <FiSend className={styles.ctaIcon} />
               </Button>
-            </a>
+            </Link>
 
-            <a href="#portfolio" className={styles.secondaryCta}>
+            <Link href="#portfolio" className={styles.secondaryCta}>
               <Button width="full" variant="secondary2" >
                <span>View Portfolio </span> 
                 <FiBriefcase className={styles.ctaIcon} />
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className={styles.animationWrapper}>

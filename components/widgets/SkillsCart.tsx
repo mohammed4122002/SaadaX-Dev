@@ -1,21 +1,22 @@
 // components/sub/SkillsCart.tsx
-import { ISkill } from "../../interfaces";
-import styles from "../../styles/modules/skillsCart.module.css";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ISkill } from "../../types";
+import styles from "../../styles/modules/skillsCart.module.css";
 
-const SkillsCart = ({ name, img }: ISkill) => {
+const SkillsCart = React.memo(function SkillsCart({ name, img }: ISkill) {
   return (
-    <motion.div 
+    <motion.div
       className={styles.skillItem}
-      whileHover={{ 
+      whileHover={{
         y: -3,
-        transition: { type: "spring", stiffness: 400 }
+        transition: { type: "spring", stiffness: 400 },
       }}
     >
       <div className={styles.iconFrame}>
-        <Image 
-          src={img} 
+        <Image
+          src={img}
           alt={name}
           width={36}
           height={36}
@@ -25,6 +26,6 @@ const SkillsCart = ({ name, img }: ISkill) => {
       <span className={styles.name}>{name}</span>
     </motion.div>
   );
-};
+});
 
 export default SkillsCart;

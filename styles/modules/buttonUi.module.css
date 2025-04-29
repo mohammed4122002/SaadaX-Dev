@@ -12,6 +12,7 @@
     border: none;
     box-shadow: 0 2px 8px rgba(60,8,126,0.08);
     letter-spacing: 0.02em;
+  
 }
 
 .button.primary {
@@ -58,4 +59,11 @@
 }
 .fitWidth {
   width: fit-content;
+}
+
+@media (max-width:780px) {
+  .button{
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
 }

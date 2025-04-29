@@ -1,8 +1,9 @@
+import React from "react";
 import { FiCode, FiExternalLink, FiGithub } from "react-icons/fi";
 import styles from "../../styles/modules/card.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../common/Button";
+import Button from "../ui/Button";
 
 interface IProps {
   project: {
@@ -15,7 +16,7 @@ interface IProps {
   };
 }
 
-const card = ({ project }: IProps) => {
+const Card = React.memo(function Card({ project }: IProps) {
   return (
     <div className={styles.projectCard}>
       <div className={styles.cardVisual}>
@@ -61,6 +62,6 @@ const card = ({ project }: IProps) => {
       </div>
     </div>
   );
-};
+});
 
-export default card;
+export default Card;

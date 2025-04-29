@@ -1,4 +1,4 @@
-/* تحسين التصميم لجعل صفحة "About" أكثر احترافية */
+
 
 .container {
   display: flex;
@@ -37,7 +37,7 @@
 .contentRight {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem ;
   gap: 1.5rem;
 }
 
@@ -60,7 +60,9 @@
   .content {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
+ 
 }
 
 .skillsMarqueeWrapper {

@@ -3,10 +3,14 @@ import styles from "../styles/modules/footer.module.css";
 import Link from "next/link";
 import Button from "./common/Button";
 
-import SocialIcons from "./sub/SocialIcons";
+import SocialIcons from "./widgets/SocialIcons";
 import { ISocialLink } from "@/interfaces";
 import { NAVLINKS, SOCIALLINKS } from "@/data";
-import NavLinks from "./sub/NavLinks";
+import NavLinks from "./widgets/NavLinks";
+import FooterSocials from "./widgets/FooterSocials";
+import FooterLinks from "./widgets/FooterLinks";
+import FooterNewsletter from "./widgets/FooterNewsletter";
+
 const Footer = () => {
   const RenderSocialLink = SOCIALLINKS.map((social: ISocialLink, idx) => (
     <SocialIcons
@@ -30,24 +34,17 @@ const Footer = () => {
             Transforming ideas into exceptional digital experiences with
             cutting-edge technology and artistic vision.
           </p>
-          <div className={styles.socials}>{RenderSocialLink}</div>
+          <FooterSocials styles={styles} SOCIALLINKS={SOCIALLINKS} />
         </div>
 
         <div className={styles.section}>
           <h3 className={styles.title}>Navigation</h3>
-          <div className={styles.navLinks}>{RenderNavLink}</div>
+          <FooterLinks styles={styles} NAVLINKS={NAVLINKS} />
         </div>
 
         <div className={styles.section}>
           <h3 className={styles.title}>Stay Updated</h3>
-          <form className={styles.newsletter}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className={styles.input}
-            />
-            <Button>Subscribe</Button>
-          </form>
+          <FooterNewsletter styles={styles} />
         </div>
       </div>
 
@@ -61,4 +58,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;

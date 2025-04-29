@@ -1,15 +1,21 @@
 "use client";
-
+import { motion } from "framer-motion";
 import styles from "../../styles/modules/contact.module.css";
 import Lottie from "lottie-react";
 import contactAnimation from "../../animation/contact.json";
 import { FiSend, FiMapPin } from "react-icons/fi";
-import Button from "../common/Button";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import Button from "../ui/Button";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { marqueeVariants, slideInFromRight } from "@/utils/motion";
 
 const Contact = () => {
   return (
-    <section className={styles.section} id="contact">
+    <motion.section
+      className={styles.section}
+      id="contact"
+      initial="hidden"
+      whileInView="visible"
+    >
       <div className={styles.leftSide}>
         <div className={styles.header}>
           <h2>
@@ -39,23 +45,25 @@ const Contact = () => {
             <label>Your Vision</label>
             <span className={styles.inputBorder}></span>
           </div>
-          <Button width="full" >Send Message <FiSend className={styles.icon} /> </Button>
+          <Button width="full">
+            Send Message <FiSend className={styles.icon} />{" "}
+          </Button>
         </form>
       </div>
 
       <div className={styles.rightSide}>
         <div className={styles.animationContainer}>
-        {/*  <Lottie
+          {/*  <Lottie
             animationData={contactAnimation}
           
           />
           */}
-           <DotLottieReact
-      src="https://lottie.host/06c453ba-5ea5-4b93-9571-a47cda195744/E1pzMlU22O.lottie"
-      loop
-      autoplay
-      style={{ width: '400px', height: '400px' }}
-    />
+          <DotLottieReact
+            src="https://lottie.host/06c453ba-5ea5-4b93-9571-a47cda195744/E1pzMlU22O.lottie"
+            loop
+            autoplay
+            style={{ width: "400px", height: "400px" }}
+          />
         </div>
         <div className={styles.locationCard}>
           <div className={styles.pinIcon}>
@@ -67,8 +75,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-export default Contact ;
+export default Contact;

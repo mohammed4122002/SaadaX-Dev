@@ -1,11 +1,9 @@
 "use client";
 import styles from "../../styles/modules/about.module.css";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { slideInFromLeft, slideInFromRight } from "../../utils/motion";
 import { SKILLS } from "../../data/index";
-import SkillsCart from "../sub/SkillsCart";
-import Button from "../common/Button";
+import SkillsCart from "../widgets/SkillsCart";
+import Button from "../ui/Button";
 
 const About = () => {
   const duplicatedSkills = [...SKILLS, ...SKILLS];
@@ -15,7 +13,7 @@ const About = () => {
   ));
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="about">
       <div className={styles.content}>
         <div className={styles.contentLeft}>
           <Image

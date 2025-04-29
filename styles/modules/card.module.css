@@ -6,6 +6,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   max-width: 600px;
+  min-width: 300px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -116,4 +117,8 @@
   background: none;
   box-shadow: none;
 }
-
+@media (max-width:780px) {
+  .projectCard{
+    max-width: 400px;
+  }
+}

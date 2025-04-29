@@ -6,7 +6,7 @@ import { slideInFromLeft, slideInFromRight } from "../../utils/motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FiCode, FiExternalLink, FiGithub } from "react-icons/fi";
-import Card from "../sub/Card";
+import Card from "../widgets/Card";
 import { PROJECTS } from "../../data";
 
 const Projects = () => {

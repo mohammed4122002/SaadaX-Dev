@@ -3,10 +3,10 @@ import { InavLink, ISocialLink } from "../interfaces";
 import { FaHome, FaUserAlt, FaLaptopCode, FaEnvelope, FaBlog, FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 
 export const NAVLINKS: InavLink[] = [
-    { href: "#home", label: "Home", icon: <FaHome /> },
-    { href: "#about", label: "About", icon: <FaUserAlt /> },
-    { href: "#projects", label: "Projects", icon: <FaLaptopCode /> },
-    { href: "#contact", label: "Contact", icon: <FaEnvelope /> },
+    { href: "/#home", label: "Home", icon: <FaHome /> },
+    { href: "/#about", label: "About", icon: <FaUserAlt /> },
+    { href: "/#projects", label: "Projects", icon: <FaLaptopCode /> },
+    { href: "/#contact", label: "Contact", icon: <FaEnvelope /> },
     { href: "/blog", label: "Blog", icon: <FaBlog /> },
 ];
 
@@ -33,74 +33,38 @@ export const SKILLS = [
     {
       title: "VS Code Clone",
       description:
-        "Simulates the VS Code environment using React, TypeScript, Tailwind CSS, and Redux Toolkit.",
+        "A web-based clone of Visual Studio Code built with React, TypeScript, Tailwind CSS, and Redux Toolkit.",
       techStack: ["React", "TypeScript", "Redux", "Tailwind CSS"],
       image: "/vscode.png",
       demoLink: "https://vs-code-eight-sepia.vercel.app/",
       githubLink: "https://github.com/mohammed4122002/VS-code",
     },
     {
-      title: "VS Code Clone",
+      title: "Personal Portfolio",
       description:
-        "Simulates the VS Code environment using React, TypeScript, Tailwind CSS, and Redux Toolkit.",
-      techStack: ["React", "TypeScript", "Redux", "Tailwind CSS"],
-      image: "/vscode.png",
-      demoLink: "https://github.com/mohammed4122002/VS-code",
-      githubLink: "https://github.com/mohammed4122002/VS-code",
+        "A modern, responsive portfolio website to showcase my projects and skills, built with Next.js and Framer Motion.",
+      techStack: ["Next.js", "Framer Motion", "CSS Modules"],
+      image: "/portfolio.png",
+      demoLink: "https://saadax-portfolio.vercel.app/",
+      githubLink: "https://github.com/mohammed4122002/saada-x",
     },
     {
-      title: "VS Code Clone",
+      title: "E-Commerce Store",
       description:
-        "Simulates the VS Code environment using React, TypeScript, Tailwind CSS, and Redux Toolkit.",
-      techStack: ["React", "TypeScript", "Redux", "Tailwind CSS"],
-      image: "/vscode.png",
-      demoLink: "https://github.com/mohammed4122002/VS-code",
-      githubLink: "https://github.com/mohammed4122002/VS-code",
+        "A full-featured e-commerce web app with product search, cart, and checkout, using React and Redux.",
+      techStack: ["React", "Redux", "Node.js", "Express"],
+      image: "/ecommerce.png",
+      demoLink: "https://ecommerce-demo.vercel.app/",
+      githubLink: "https://github.com/mohammed4122002/ecommerce-demo",
     },
     {
-      title: "VS Code Clone",
+      title: "Blog Platform",
       description:
-        "Simulates the VS Code environment using React, TypeScript, Tailwind CSS, and Redux Toolkit.",
-      techStack: ["React", "TypeScript", "Redux", "Tailwind CSS"],
-      image: "/vscode.png",
-      demoLink: "https://github.com/mohammed4122002/VS-code",
-      githubLink: "https://github.com/mohammed4122002/VS-code",
-    },
-    {
-      title: "VS Code Clone",
-      description:
-        "Simulates the VS Code environment using React, TypeScript, Tailwind CSS, and Redux Toolkit.",
-      techStack: ["React", "TypeScript", "Redux", "Tailwind CSS"],
-      image: "/vscode.png",
-      demoLink: "https://github.com/mohammed4122002/VS-code",
-      githubLink: "https://github.com/mohammed4122002/VS-code",
-    },
-    {
-      title: "VS Code Clone",
-      description:
-        "Simulates the VS Code environment using React, TypeScript, Tailwind CSS, and Redux Toolkit.",
-      techStack: ["React", "TypeScript", "Redux", "Tailwind CSS"],
-      image: "/vscode.png",
-      demoLink: "https://github.com/mohammed4122002/VS-code",
-      githubLink: "https://github.com/mohammed4122002/VS-code",
-    },
-    {
-      title: "VS Code Clone",
-      description:
-        "Simulates the VS Code environment using React, TypeScript, Tailwind CSS, and Redux Toolkit.",
-      techStack: ["React", "TypeScript", "Redux", "Tailwind CSS"],
-      image: "/vscode.png",
-      demoLink: "https://github.com/mohammed4122002/VS-code",
-      githubLink: "https://github.com/mohammed4122002/VS-code",
-    },
-    {
-      title: "VS Code Clone",
-      description:
-        "Simulates the VS Code environment using React, TypeScript, Tailwind CSS, and Redux Toolkit.",
-      techStack: ["React", "TypeScript", "Redux", "Tailwind CSS"],
-      image: "/vscode.png",
-      demoLink: "https://github.com/mohammed4122002/VS-code",
-      githubLink: "https://github.com/mohammed4122002/VS-code",
+        "A Markdown-powered blog platform with dynamic routing and SEO optimization, built with Next.js.",
+      techStack: ["Next.js", "Markdown", "SEO"],
+      image: "/blog-platform.png",
+      demoLink: "https://blog-demo.vercel.app/",
+      githubLink: "https://github.com/mohammed4122002/blog-demo",
     },
   ];
   
