@@ -1,10 +1,10 @@
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import styles from "../styles/modules/footer.module.css";
 import Link from "next/link";
-import Button from "./common/Button";
+import Button from "./ui/Button";
 
 import SocialIcons from "./widgets/SocialIcons";
-import { ISocialLink } from "@/interfaces";
+import { ISocialLink } from "@/types";
 import { NAVLINKS, SOCIALLINKS } from "@/data";
 import NavLinks from "./widgets/NavLinks";
 import FooterSocials from "./widgets/FooterSocials";

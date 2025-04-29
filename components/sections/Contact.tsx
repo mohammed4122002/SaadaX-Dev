@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import styles from "../../styles/modules/contact.module.css";
 import Lottie from "lottie-react";
-import contactAnimation from "../../animation/contact.json";
 import { FiSend, FiMapPin } from "react-icons/fi";
 import Button from "../ui/Button";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
