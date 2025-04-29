@@ -4,23 +4,31 @@ import styles from "../../../styles/modules/blogPost.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = params;
 
   interface BlogPostMeta {
     title: string;
     date: string;
     image: string;
-    contentHtml:'string' | TrustedHTML;
+    contentHtml: string | TrustedHTML;
   }
 
-  const post : BlogPostMeta  = await getPostBySlug(slug);
+  const post: BlogPostMeta = await getPostBySlug(slug);
 
   if (!post) return notFound();
 
   return (
     <article className={styles.blogPost}>
-      <Link href="/blog" className={styles.backBtn}>&larr; Back</Link>
+      <Link href="/blog" className={styles.backBtn}>
+        &larr; Back
+      </Link>
       <h1 className={styles.title}>{post.title}</h1>
       <Image
         src={post.image}
@@ -31,7 +39,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         priority={false}
       />
       <span className={styles.date}>{post.date}</span>
-      <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+      <div
+        className={styles.content}
+        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+      />
     </article>
   );
-} 
+}
