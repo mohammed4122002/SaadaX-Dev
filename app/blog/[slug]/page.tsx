@@ -6,9 +6,7 @@ import Image from "next/image";
 
 export default async function BlogPostPage({
   params,
-}: {
-  params: { slug: string };
-}) {
+}: { params: { slug: string } }) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) notFound();
