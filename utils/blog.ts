@@ -36,11 +36,11 @@ export function getAllPosts(): BlogPostMeta[] {
   });
 }
 
-export async function getPostBySlug(slug: string): Promise<BlogPost> {
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   
   if (!fs.existsSync(fullPath)) {
-    throw new Error(`Post with slug "${slug}" not found.`);
+    return null;
   }
 
   const fileContents = fs.readFileSync(fullPath, 'utf8');
