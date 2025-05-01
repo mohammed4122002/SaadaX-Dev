@@ -31,9 +31,9 @@ const Navbar = () => {
             styles={styles}
             NAVLINKS={NAVLINKS}
           />
-          <div className={styles.socials}>
+          
             <NavbarSocials styles={styles} SOCIALLINKS={SOCIALLINKS} />
-          </div>
+          
         </div>
 
         <button className={styles.mobileToggle} onClick={toggleMenu}>

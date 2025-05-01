@@ -1,76 +1,36 @@
-
+/* styles/modules/projects.module.css */
 .projectsSection {
-  position: relative;
-  padding: var(--gap-large) 2rem;
-  color: var(--color-text-primary);
- 
+  padding: 6rem 2rem;
+  background: var(--bg-main);
 }
-
-.header {
+.header{
   text-align: center;
-  margin-bottom: var(--gap-large);
-}
 
-.sectionTitle {
+}
+.sectionTitle{
   font-family: var(--font-title);
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: var(--gap-small);
-  color: transparent;
+  font-size: 3rem;
+  line-height: 1.1;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
   background-clip: text;
-  background-image: var(--gradient-primary);
-}
-
-.titleAccent {
   color: transparent;
-  background-clip: text;
-  background-image: var( --gradient-tech);
-  position: relative;
+
+}
+.sectionSubtitle{
+  color: var(--color-text-muted);
+  text-shadow: var(--shadow-lg);
 }
 
-.titleAccent::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 3px;
-  background: var(--gradient-tech);
-  border-radius: 2px;
-}
 
-.sectionSubtitle {
-  font-size: var(--font-size-subtitle);
-  color: var(--color-text-secondary);
-  letter-spacing: 0.1em;
-}
 
 .projectsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  gap: var(--gap-medium);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
   max-width: 1400px;
   margin: 0 auto;
-  position: relative;
-  place-items:center ;
-  place-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Applied color variables to the Projects section */
-.projects {
-  background-color: var(--bg-secondary);
-  color: var(--color-text-secondary);
-}
-
-.project-card {
-  background: var(--bg-primary);
-  border: var(--border-width) solid var(--color-border);
-  box-shadow: 0 4px 6px var(--shadow-dark);
-  transition: var(--transition);
-}
-
-.project-card:hover {
-  border-color: var(--color-scroll);
-  box-shadow: 0 6px 8px var(--shadow-light);
-  transform: translateY(-5px);
-}

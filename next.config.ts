@@ -5,7 +5,12 @@ const nextConfig: NextConfig = {
     domains: [
       "images.unsplash.com",
       "via.placeholder.com",
-      "www.tatvasoft.com", // 👈 
+      "www.tatvasoft.com", 
+      "strapi.dhiwise.com",
+      "images.prismic.io",
+      "miro.medium.com", 
+      "www.syncfusion.com",
+      "askgalore.com", 
     ],
   },
 };

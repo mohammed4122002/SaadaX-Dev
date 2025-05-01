@@ -13,5 +13,4 @@ TypeScript can supercharge your React development experience. In this article, w
 
 To get started, install TypeScript and the necessary types:
 
-```bash
-npm install --save typescript @types/react @types/react-dom
+

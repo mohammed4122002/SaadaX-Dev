@@ -24,7 +24,7 @@ const Projects = () => {
     <section className={styles.projectsSection}>
       <div className={styles.header}>
         <h2 className={styles.sectionTitle}>
-          <span className={styles.titleAccent}>Innovative</span> Creations
+          Innovative Creations
         </h2>
         <p className={styles.sectionSubtitle}>
           Selected projects that showcase technical excellence

@@ -2,7 +2,7 @@
 title: "Next.js SEO Best Practices"
 date: "2024-03-15"
 summary: "A complete guide to optimizing your Next.js site for search engines."
-image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80"
+image: "https://askgalore.com/_next/image?url=https%3A%2F%2Faskgaloreqaprodpublic.blob.core.windows.net%2Fpublic%2Fblog-images%2Fnextjs-seo.jpg&w=3840&q=75"
 ---
 
 # Next.js SEO Best Practices

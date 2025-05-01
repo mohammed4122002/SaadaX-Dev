@@ -41,7 +41,7 @@ export default function RootLayout({
       </head>
       <body>
       <Navbar />
-      <VideoBackground />
+   
         {children}
         <Footer />
 

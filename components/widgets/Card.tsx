@@ -47,13 +47,13 @@ const Card = React.memo(function Card({ project }: IProps) {
 
         <div className={styles.actionButtons}>
           <Link href={project.demoLink} className={styles.demoButton}>
-            <Button variant={"secondary1"}>
+            <Button variant={"primary"}>
               <FiExternalLink />
               Live Demo
             </Button>
           </Link>
           <Link href={project.githubLink} className={styles.codeButton}>
-            <Button variant={"secondary2"}>
+            <Button variant={"accent"}>
               <FiGithub />
               Source Code
             </Button>

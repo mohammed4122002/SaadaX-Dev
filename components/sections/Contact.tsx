@@ -9,11 +9,10 @@ import { marqueeVariants, slideInFromRight } from "@/utils/motion";
 
 const Contact = () => {
   return (
-    <motion.section
-      className={styles.section}
+    <section
+      className={styles.contactSection}
       id="contact"
-      initial="hidden"
-      whileInView="visible"
+    
     >
       <div className={styles.leftSide}>
         <div className={styles.header}>
@@ -52,11 +51,7 @@ const Contact = () => {
 
       <div className={styles.rightSide}>
         <div className={styles.animationContainer}>
-          {/*  <Lottie
-            animationData={contactAnimation}
-          
-          />
-          */}
+        
           <DotLottieReact
             src="https://lottie.host/06c453ba-5ea5-4b93-9571-a47cda195744/E1pzMlU22O.lottie"
             loop
@@ -74,7 +69,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

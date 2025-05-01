@@ -9,7 +9,7 @@ interface NavbarSocialsProps {
 
 const NavbarSocials: React.FC<NavbarSocialsProps> = ({ styles, SOCIALLINKS }) => {
   return (
-    <>
+    <div className={styles.socials}>
       {SOCIALLINKS.map((social, idx) => (
         <SocialIcons
           key={idx}
@@ -18,7 +18,7 @@ const NavbarSocials: React.FC<NavbarSocialsProps> = ({ styles, SOCIALLINKS }) =>
           className={styles.socialLink}
         />
       ))}
-    </>
+    </div>
   );
 };
 

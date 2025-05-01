@@ -2,7 +2,7 @@
 title: "Modern CSS Tricks for 2024"
 date: "2024-02-28"
 summary: "Discover the latest CSS techniques to make your UI stand out."
-image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+image: "https://www.syncfusion.com/blogs/wp-content/uploads/2024/09/5-Modern-CSS-Styles-You-Should-Know-In-2024.jpg"
 ---
 
 # Modern CSS Tricks for 2024

@@ -37,11 +37,7 @@ const Footer = () => {
           <FooterSocials styles={styles} SOCIALLINKS={SOCIALLINKS} />
         </div>
 
-        <div className={styles.section}>
-          <h3 className={styles.title}>Navigation</h3>
-          <FooterLinks styles={styles} NAVLINKS={NAVLINKS} />
-        </div>
-
+      
         <div className={styles.section}>
           <h3 className={styles.title}>Stay Updated</h3>
           <FooterNewsletter styles={styles} />

@@ -20,8 +20,7 @@ const Hero = () => {
           </div>
           <h1 className={styles.title}>
             {" "}
-            Transforming Ideas Into
-            <span className={styles.highlight}> Digital Masterpieces</span>
+            Transforming Ideas Into<span className={styles.highlight}>Digital Masterpieces</span>
           </h1>
           <p className={styles.subtitle}>
             I'm <strong>Mohamed</strong>, a{" "}
@@ -34,14 +33,14 @@ const Hero = () => {
 
           <div className={styles.ctaGroup}>
             <Link href="#contact" className={styles.primaryCta}>
-              <Button variant="secondary1" width="full">
+              <Button variant="primary" width="full">
                <span> Start Projects  </span>
                 <FiSend className={styles.ctaIcon} />
               </Button>
             </Link>
 
             <Link href="#portfolio" className={styles.secondaryCta}>
-              <Button width="full" variant="secondary2" >
+              <Button width="full" variant="accent" >
                <span>View Portfolio </span> 
                 <FiBriefcase className={styles.ctaIcon} />
               </Button>

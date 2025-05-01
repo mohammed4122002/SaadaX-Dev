@@ -25,7 +25,7 @@ export function getAllPosts(): BlogPostMeta[] {
       .map(file => {
         const slug = file.replace(/\.md$/, '');
         const fullPath = path.join(postsDirectory, file);
-        const { data } = matter(fs.readFileSync(fullPath, 'utf8'));
+        const { data  } = matter(fs.readFileSync(fullPath, 'utf8'));
         
         return {
           slug,

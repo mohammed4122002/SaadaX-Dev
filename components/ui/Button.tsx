@@ -3,7 +3,7 @@ import styles from "../../styles/modules/buttonUi.module.css"
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
      children   : React.ReactNode;
       width?   : "fit" | "full" ;
-      variant? : "primary" | "secondary1" | "secondary2";
+      variant? : "primary" | "secondary" | "accent";
 }
 
 

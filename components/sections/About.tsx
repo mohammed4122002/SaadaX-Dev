@@ -28,7 +28,7 @@ const About = () => {
             alt="my image"
             width={35}
             height={35}
-            className={styles.react}
+            className={styles.doc}
           />
           
         </div>
@@ -49,7 +49,7 @@ const About = () => {
             download
             className={styles.downloadBtn}
           >
-            <Button variant={"secondary1"}>Download CV</Button>
+            <Button variant={"secondary"}>Download CV</Button>
           </a>
         </div>
       </div>
