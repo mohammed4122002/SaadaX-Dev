@@ -16,10 +16,10 @@ export const metadata = {
     title: "Mohammed Saada | Full-Stack Developer Portfolio",
     description:
       "Explore Mohammed Saada's projects, skills, and passion for building modern web applications.",
-    url: "https://saadax-portfolio.vercel.app", // استبدل بالرابط الفعلي
+    url: "/my.jpg", 
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/my.jpg",
         width: 1200,
         height: 630,
         alt: "Mohammed Saada Portfolio Preview",

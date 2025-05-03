@@ -1,0 +1,58 @@
+@property --x {
+    syntax: "<length-percentage>";
+    initial-value: 0%;
+  }
+  
+  .blog-sort {
+    width: fit-content;
+    display: flex;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-secondary);
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+  
+    &[data-sort="asc"] {
+      --x: calc(0% + 10px);
+    }
+  
+    &[data-sort="desc"] {
+      --x: 50%;
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      margin: auto 0;
+      left: var(--x);
+      width: 40%;
+      aspect-ratio: 1;
+      background-color: var(--color-secondary);
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+      z-index: 1;
+    }
+  
+    & button {
+      display: flex;
+      align-items: center;
+      gap: 3;
+      padding:10px;
+      background-color: transparent;
+      border-radius: var(--radius-lg);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+  
+      &:hover {
+        background-color: var(--color-secondary);
+      }
+  
+      & svg {
+        size: 30px;
+        z-index: 2;
+      }
+    }
+  }

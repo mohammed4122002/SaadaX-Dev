@@ -12,6 +12,7 @@
 }
 
 .projectCard:hover {
+  box-shadow:var(--shadow-lg);
   transform: translateY(-8px);
   box-shadow: none;
   border-color: var(--color-secondary);

@@ -4,7 +4,9 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
+
 const postsDirectory = path.join(process.cwd(), 'data/blog-posts');
+
 
 export type BlogPostMeta = {
   slug: string;
@@ -14,11 +16,14 @@ export type BlogPostMeta = {
   summary: string;
 };
 
+
+
 export type BlogPost = BlogPostMeta & {
   contentHtml: string;
 };
 
-export function getAllPosts(): BlogPostMeta[] {
+export async function getAllPosts(): Promise<BlogPostMeta[]> {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   try {
     return fs.readdirSync(postsDirectory)
       .filter(file => file.endsWith('.md'))
@@ -47,11 +52,10 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     
     if (!fs.existsSync(fullPath)) return null;
 
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const { data, content } = matter(fileContents);
+    const { data, content } = matter(fs.readFileSync(fullPath, 'utf8'));
     
     const processedContent = await remark()
-      .use(html)
+    .use(html)
       .process(content);
     
     return {
@@ -67,3 +71,4 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     return null;
   }
 }
+

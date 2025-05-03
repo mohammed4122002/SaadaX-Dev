@@ -44,27 +44,54 @@ export const SKILLS = [
       description:
         "A modern, responsive portfolio website to showcase my projects and skills, built with Next.js and Framer Motion.",
       techStack: ["Next.js", "Framer Motion", "CSS Modules"],
-      image: "/portfolio.png",
-      demoLink: "https://saadax-portfolio.vercel.app/",
-      githubLink: "https://github.com/mohammed4122002/saada-x",
+      image: "/protfolio.png",
+      demoLink: "https://saada-x-dev-92f4.vercel.app/",
+      githubLink: "https://github.com/mohammed4122002/SaadaX-Dev",
     },
     {
       title: "E-Commerce Store",
       description:
         "A full-featured e-commerce web app with product search, cart, and checkout, using React and Redux.",
       techStack: ["React", "Redux", "Node.js", "Express"],
-      image: "/ecommerce.png",
-      demoLink: "https://ecommerce-demo.vercel.app/",
-      githubLink: "https://github.com/mohammed4122002/ecommerce-demo",
+      image: "/shopCars.png",
+      demoLink: "https://github.com/mohammed4122002/ReactShopCars",
+      githubLink: "https://github.com/mohammed4122002/ReactShopCars",
     },
     {
       title: "Blog Platform",
       description:
         "A Markdown-powered blog platform with dynamic routing and SEO optimization, built with Next.js.",
       techStack: ["Next.js", "Markdown", "SEO"],
-      image: "/blog-platform.png",
-      demoLink: "https://blog-demo.vercel.app/",
-      githubLink: "https://github.com/mohammed4122002/blog-demo",
+      image: "/blog.png",
+      demoLink: "https://saada-x-dev-92f4.vercel.app/blog",
+      githubLink: "https://github.com/mohammed4122002/SaadaX-Dev",
+    },
+    {
+      title: "Ninja Turtles Game",
+      description:
+        "A fun and interactive game featuring Ninja Turtles, built with React and CSS animations.",
+      techStack: ["React", "CSS Animations"],
+      image: "/ninja.png",
+      demoLink: "https://github.com/mohammed4122002/Ninja-project",
+      githubLink: "https://github.com/mohammed4122002/Ninja-project",
+    },
+    {
+      title: "protfolio website",
+      description:
+        "A portfolio website to showcase my projects and skills, built with HTML and CSS.",
+      techStack: ["HTML", "CSS"],
+      image: "/pr2.png",
+      demoLink: "https://mohammed4122002.github.io/Responsive_project_html_css-js_1/",
+      githubLink: "https://github.com/mohammed4122002/Responsive_project_html_css-js_1",
+    },
+    {
+      title: "lecture website",
+      description:
+        "A lecture website for a university, built with html and CSS ",
+      techStack: ["HTML", "CSS"],
+      image: "/un.png",
+      demoLink: "https://vs-code-3awd.vercel.app/",
+      githubLink: "https://github.com/mohammed4122002/University-project",
     },
   ];
   

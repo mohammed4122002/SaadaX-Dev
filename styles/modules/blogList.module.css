@@ -1,22 +1,5 @@
-.blogListSection {
-  position: relative;
-  padding: 6rem 1rem 1rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  z-index: 50;
-}
 
-.title {
-  font-family: var(--font-title);
-  font-size: 3rem;
-  line-height: 1.1;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-align: center;
- margin-bottom: 2rem;
-}
+
 
 .blogList {
   display: flex;
@@ -36,6 +19,7 @@
   flex-direction: column;
   position: relative;
   border: 1px solid var(--color-secondary);
+ max-height: 550px;
 }
 
 .blogCard:hover {
@@ -121,4 +105,20 @@
 .blogListLink:hover {
   color: var(--color-primary);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,35 +1,31 @@
 import { getAllPosts } from "@/utils/blog";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "../../styles/modules/blogList.module.css";
+import BlogListClient from "./_components/BlogListClient";
+import { BlogSort } from "./_components/Blog-sort";
+import styles from "../../styles/modules/blogAll.module.css";
+import { Suspense } from "react";
+import SkeletonBlogList from "./_components/SkeletonBlogList";
 
-export default function BlogListPage() {
-  const posts = getAllPosts();
+export default async function BlogListPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const blogs =  getAllPosts()
+
+  const { sort } = await searchParams
+
+  const sortOrder = sort === "desc" ? "desc" : "asc" // default to 'asc'
+
   return (
-    <section className={styles.blogListSection}>
-      <h1 className={styles.title}>Blog</h1>
-      <div className={styles.blogList}>
-        {posts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.blogCard}>
-            <Image
-              src={post.image}
-              alt={post.title}
-              className={styles.blogImage}
-              width={600}
-              height={320}
-             
-            />
-            <div className={styles.blogCardContent}>
-              <h2>{post.title}</h2>
-              <p>{post.summary}</p>
-              <span className={styles.date}>{post.date}</span>
-              <span className={styles.readMoreBtn}>Read More</span>
-            </div>
-          </Link>
-        ))}
+    <section className={styles.blogSection}>
+      <div className={styles.headerRow}>
+        <h1 className={styles.title}>Blog</h1>
+        <BlogSort />
       </div>
+      <Suspense fallback={<SkeletonBlogList count={7} />}>
+        
+        <BlogListClient blogs={blogs} sortOrder={sortOrder} />
+      </Suspense>
     </section>
   );
 }
-
-
