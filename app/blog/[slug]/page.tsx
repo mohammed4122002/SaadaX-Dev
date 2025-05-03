@@ -5,8 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = await getPostBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }>}): Promise<Metadata> {
+ 
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
   if (!post) return {};
   const ogImage = post.image || `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${encodeURIComponent(post.title ?? "Blog")}`;
  
