@@ -6,7 +6,7 @@ import SkillsCart from "../widgets/SkillsCart";
 import Button from "../ui/Button";
 
 const About = () => {
-  const duplicatedSkills = [...SKILLS, ...SKILLS];
+  const duplicatedSkills = [...SKILLS];
 
   const RenderSkills = duplicatedSkills.map((skill, index) => (
     <SkillsCart key={index} name={skill.name} img={skill.img} />
@@ -16,13 +16,16 @@ const About = () => {
     <section className={styles.container} id="about">
       <div className={styles.content}>
         <div className={styles.contentLeft}>
-          <Image
-            src="/my.jpg"
-            alt="my image"
-            width={300}
-            height={300}
-            className={styles.img}
-          />
+          <div className={styles.coloredFrame}>
+            <Image
+              src="/my.jpg"
+              alt="my image"
+              width={320}
+              height={320}
+              className={styles.img}
+              style={{borderRadius:'24px', filter:'hue-rotate(25deg) contrast(1.08)'}}
+            />
+          </div>
           <Image
             src="/pngwing.com.png"
             alt="my image"
@@ -47,17 +50,17 @@ const About = () => {
           <a
             href="/Mohammed-Saada-cv.pdf"
             download
-            className={styles.downloadBtn}
+           
           >
-            <Button variant={"secondary"}>Download CV</Button>
+            <Button variant={"accent"}>Download CV</Button>
           </a>
         </div>
       </div>
 
         <div className={styles.skillsMarqueeWrapper}>
-          <div className={styles.marqueeTrack}>
+            <h2 className={styles.heading}>Skills</h2>
             <div className={styles.marqueeContent}>{RenderSkills}</div>
-          </div>
+          
         </div>
    
     </section>

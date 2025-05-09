@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.4rem 0.9rem;
+  padding: 0.3rem 0.9rem;
   background: inherit;
   border: 1px solid var(--color-secondary);
   box-shadow: var(--shadow-sm);
@@ -15,7 +15,6 @@
 
 .iconFrame {
   padding: 8px;
-  background: var(--bg-main);
   border-radius: 10px;
   box-shadow: var(--shadow-sm);
 }

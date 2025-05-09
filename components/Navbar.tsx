@@ -6,7 +6,8 @@ import NavbarLinks from "./widgets/NavbarLinks";
 import Link from "next/link";
 import NavbarSocials from "./widgets/NavbarSocials";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import {motion} from "framer-motion";
+import { slideInFromTop } from "@/utils/motion";
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("#home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,12 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <nav className={styles.navbar}>
+    <header className={styles.header}>
+    <motion.nav className={styles.navbar}
+    variants={slideInFromTop}
+      initial="hidden"
+  animate="visible"
+    >
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href="/#home">
@@ -60,7 +66,8 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </nav>
+    </motion.nav>
+    </header>
   );
 };
 

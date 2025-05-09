@@ -27,10 +27,7 @@
   box-shadow: inset var(--shadow-lg);
  
 }
-.section:hover {
-  transform: translateY(-6px);
-  scale: 1.05;
-}
+
 
 .title {
 

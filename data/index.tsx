@@ -1,19 +1,29 @@
 import { FiMail } from "react-icons/fi";
 import { InavLink, ISocialLink } from "../types";
-import { FaHome, FaUserAlt, FaLaptopCode, FaEnvelope, FaBlog, FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
+import { 
+  Home,
+  User,
+  Mail,
+  BookOpen,
+  Linkedin,
+  Github,
+  Code
+
+ 
+} from "lucide-react";
 
 export const NAVLINKS: InavLink[] = [
-    { href: "/#home", label: "Home", icon: <FaHome /> },
-    { href: "/#about", label: "About", icon: <FaUserAlt /> },
-    { href: "/#projects", label: "Projects", icon: <FaLaptopCode /> },
-    { href: "/#contact", label: "Contact", icon: <FaEnvelope /> },
-    { href: "/blog", label: "Blog", icon: <FaBlog /> },
+    { href: "/#home", label: "Home", icon: <Home /> },
+    { href: "/#about", label: "About", icon: <User /> },
+    { href: "/#projects", label: "Projects", icon: <Code/> },
+    { href: "/#contact", label: "Contact", icon: <Mail /> },
+    { href: "/blog", label: "Blog", icon: <BookOpen /> },
 ];
 
 export const SOCIALLINKS: ISocialLink[] = [ 
-    { href: "https://www.linkedin.com/in/mohammed-abu-saada-858159265", icon: <FaLinkedin/>  },
-    { href: "https://github.com/mohammed4122002", icon: <FaGithub/>  },
-    { href: "mohammedsaadaang@gmail.com", icon:  <FiMail /> },
+    { href: "https://www.linkedin.com/in/mohammed-abu-saada-858159265", icon: <Linkedin/>  },
+    { href: "https://github.com/mohammed4122002", icon: <Github/>  },
+    { href: "mohammedsaadaang@gmail.com", icon:  <Mail /> },
 ];
 
 

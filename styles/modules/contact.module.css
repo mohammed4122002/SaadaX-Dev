@@ -18,18 +18,23 @@
   box-shadow: inset var(--shadow-lg);
 }
 
-.leftSide:hover {
-  transform: translateY(-5px);
-}
+
 .header {
   h2 {
     font-family: var(--font-title);
-    font-size: 3rem;
+    font-size: 2.7rem;
     line-height: 1.1;
     background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    margin-bottom: 5px;
+  }
+  p{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    margin-bottom: 1rem;
   }
 }
 
@@ -130,11 +135,7 @@
   box-shadow: inset var(--shadow-lg);
 }
 
-.locationCard:hover {
 
-  transform: translateY(-8px);
-  box-shadow:var(--shadow-lg);
-}
 
 .pinIcon {
   font-size: 2.2rem;
@@ -145,7 +146,7 @@
   .pinIcon:hover{
     color: var(--color-primary);
   }
-
+ 
 .locationText h4 {
   color: #ffffff;
   font-size: 1.4rem;

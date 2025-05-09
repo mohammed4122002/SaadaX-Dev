@@ -24,20 +24,10 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  gap: 1;
+  gap: 5px;
   max-width: 700px;
 }
 
-.badge {
-
-  color: var(--color-text-inverse);
-  padding: 0.8rem 1.8rem;
-  border-radius: var(--radius-lg);
-  width: fit-content;
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--color-secondary);
-  box-shadow: inset var(--shadow-lg);
-}
 
 .title {
   font-family: var(--font-title);
@@ -48,7 +38,13 @@
   background-clip: text;
   color: transparent;
 }
+  .subtitle {
+    font-size: 1.1rem ;
+    line-height: 1.5;
+    opacity: 0.8;
+    margin-top: 1.5rem;
 
+  }
 .highlight{
   color: var(--color-secondary);
   text-shadow: var(--shadow-lg);
@@ -79,7 +75,7 @@
   .textContent{
     justify-content: center;
     align-items: center;
-    gap: 4;
+    gap: 10px;
   }
   .title {
     font-size: 2.2rem;
@@ -119,5 +115,49 @@
 @media (max-width:760px) {
   .scrollIndicator{
     display: none;
+  }
+}
+
+
+
+/* إضافة مؤشر الكتابة */
+.highlight {
+  position: relative;
+  display: inline-block;
+  color: var(--color-secondary);
+}
+
+.highlight::after {
+  content: '|';
+  position: absolute;
+  right: -8px;
+  animation: blink 1s infinite;
+  color: var(--color-primary);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  .ctaGroup {
+    flex-direction: column !important;
+    width: 100% !important;
+    
+    > * {
+      width: 100% !important;
+    }
   }
 }
