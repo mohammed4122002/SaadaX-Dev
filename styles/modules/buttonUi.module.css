@@ -1,8 +1,10 @@
 .button {
     display: flex;
     justify-content: center;
+
     align-items: center;
-    padding: 0.7em 1.5em;
+    gap: 0.5rem;
+    padding: 1em 1.5em;
     border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
@@ -76,7 +78,7 @@
 
 @media (max-width:780px) {
   .button{
-    padding: 8px 14px;
+    padding: 12px 14px;
     font-size: 0.9rem;
   }
 }

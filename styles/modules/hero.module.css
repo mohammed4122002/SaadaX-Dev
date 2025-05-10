@@ -14,7 +14,7 @@
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-    
+  width: 85%;  
   gap: 3rem;
   align-items: center;
   justify-content: center;
@@ -64,7 +64,7 @@
 
 @media (max-width: 900px) {
   .heroSection {
-    padding: 5rem 0.5rem 1rem;
+    padding: 5rem  1rem;
   }
   .content {
     flex-direction: column-reverse;
@@ -154,7 +154,7 @@
   
   .ctaGroup {
     flex-direction: column !important;
-    width: 100% !important;
+    width: 80% !important;
     
     > * {
       width: 100% !important;

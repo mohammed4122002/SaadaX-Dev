@@ -4,6 +4,7 @@
   color: #e0e0e0;
   position: relative;
   z-index: 20;
+ background: linear-gradient(135deg, #181c2f 60%, #232946 100%);
 
 }
 

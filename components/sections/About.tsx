@@ -18,22 +18,15 @@ const About = () => {
         <div className={styles.contentLeft}>
           <div className={styles.coloredFrame}>
             <Image
-              src="/my.jpg"
+              src="/my2.jpg"
               alt="my image"
               width={320}
               height={320}
               className={styles.img}
-              style={{borderRadius:'24px', filter:'hue-rotate(25deg) contrast(1.08)'}}
+              style={{borderRadius:'24px',filter: 'hue-rotate(64deg) contrast(-2.92)'}}
             />
           </div>
-          <Image
-            src="/pngwing.com.png"
-            alt="my image"
-            width={35}
-            height={35}
-            className={styles.doc}
-          />
-          
+         
         </div>
         <div className={styles.contentRight}>
           <h2 className={styles.heading}>About Me</h2>
