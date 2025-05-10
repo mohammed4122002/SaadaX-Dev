@@ -1,0 +1,56 @@
+/* fullscreenVideo.module.css */
+
+.videoOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.videoContainer {
+  width: 60vw; /* 60% من عرض الشاشة */
+  max-width: 800px; /* أقصى عرض */
+  min-width: 300px; /* أدنى عرض */
+  aspect-ratio: 16/9; /* نسبة العرض إلى الارتفاع */
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* الحفاظ على النسبة بدون اقتصاص */
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
