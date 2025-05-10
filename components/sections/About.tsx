@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import styles from "../../styles/modules/about.module.css";
 import Image from "next/image";
 import { SKILLS } from "../../data/index";
@@ -8,14 +9,39 @@ import Button from "../ui/Button";
 const About = () => {
   const duplicatedSkills = [...SKILLS];
 
-  const RenderSkills = duplicatedSkills.map((skill, index) => (
-    <SkillsCart key={index} name={skill.name} img={skill.img} />
-  ));
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: { opacity: 1, x: 0 }
+  };
 
   return (
-    <section className={styles.container} id="about">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+      className={styles.container}
+      id="about"
+    >
       <div className={styles.content}>
-        <div className={styles.contentLeft}>
+        <motion.div
+          className={styles.contentLeft}
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 50 }}
+          viewport={{ once: true }}
+        >
           <div className={styles.coloredFrame}>
             <Image
               src="/my2.jpg"
@@ -26,37 +52,72 @@ const About = () => {
               style={{borderRadius:'24px',filter: 'hue-rotate(64deg) contrast(-2.92)'}}
             />
           </div>
-         
-        </div>
-        <div className={styles.contentRight}>
+        </motion.div>
+
+        <motion.div
+          className={styles.contentRight}
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 50 }}
+          viewport={{ once: true }}
+        >
           <h2 className={styles.heading}>About Me</h2>
-          <p className={styles.paragraph}>
+          <motion.p 
+            className={styles.paragraph}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
             I am a passionate web developer with a keen interest in creating
             dynamic and responsive web applications. I love to explore new
             technologies and continuously improve my skills.
-          </p>
-          <p className={styles.paragraph}>
+          </motion.p>
+          <motion.p
+            className={styles.paragraph}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
             In my free time, I enjoy working on personal projects, contributing
             to open-source, and learning about the latest trends in web
             development.
-          </p>
-          <a
-            href="/Mohammed-Saada-cv.pdf"
-            download
-           
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
           >
-            <Button variant={"accent"}>Download CV</Button>
-          </a>
-        </div>
+            <a href="/Mohammed-Saada-cv.pdf" download>
+              <Button variant={"accent"}>Download CV</Button>
+            </a>
+          </motion.div>
+        </motion.div>
       </div>
 
-        <div className={styles.skillsMarqueeWrapper}>
-            <h2 className={styles.heading}>Skills</h2>
-            <div className={styles.marqueeContent}>{RenderSkills}</div>
-          
-        </div>
-   
-    </section>
+      <motion.div
+        className={styles.skillsMarqueeWrapper}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <h2 className={styles.heading}>Skills</h2>
+        <motion.div
+          className={styles.marqueeContent}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {duplicatedSkills.map((skill, index) => (
+            <motion.div key={index} variants={itemVariants}>
+              <SkillsCart name={skill.name} img={skill.img} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
+
 export default About;

@@ -59,7 +59,7 @@
 /* الأنماط الخاصة بالرسوم المتحركة */
 .animationWrapper {
   position: relative;
-  max-width: 600px;
+  min-width: 300px;
 }
 
 @media (max-width: 900px) {

@@ -121,14 +121,14 @@ position: relative;
 }
 
 .marqueeContent{
-    margin-top: 10px3;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem 2.5rem;
   width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
- align-items: center;
- justify-content: center;
- gap: 15px;
+  max-width: 1200px;
+margin: 0% auto;
+  justify-content: center;
+
 }
 
 .skillsSection {
