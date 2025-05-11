@@ -93,7 +93,7 @@
 .mouseWrapper {
   width: 34px;
   height: 56px;
-  border: 2px solid var(--color-primary);
+  border: 3px solid var(--color-primary);
   border-radius: 17px;
   display: flex;
   justify-content: center;

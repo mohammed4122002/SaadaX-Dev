@@ -8,6 +8,7 @@ import NavbarSocials from "./widgets/NavbarSocials";
 import { FiMenu, FiX } from "react-icons/fi";
 import {motion} from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
+import Image from "next/image";
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("#home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +25,14 @@ const Navbar = () => {
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href="/#home">
-            SaadaX <span className={styles.navbarLogoHighlight}>Dev</span>
+          <Image
+            src="/lolol.png"
+            alt="Logo"
+            width={80}
+            height={80}
+            className={styles.logoImage}
+          />
+          {/*  SaadaX <span className={styles.navbarLogoHighlight}>Dev</span>*/}
           </Link>
         </div>
 

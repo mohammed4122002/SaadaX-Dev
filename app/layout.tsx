@@ -16,10 +16,10 @@ export const metadata = {
     title: "Mohammed Saada | Full-Stack Developer Portfolio",
     description:
       "Explore Mohammed Saada's projects, skills, and passion for building modern web applications.",
-    url: "/my.jpg", 
+    url: "/lolol.png", 
     images: [
       {
-        url: "/my.jpg",
+        url: "/lolol.png",
         width: 1200,
         height: 630,
         alt: "Mohammed Saada Portfolio Preview",
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <head>
-        <link rel="icon" href="../favicon.ico" />
+        <link rel="icon" href="../lolol2.PNG" />
       </head>
       <body>
       <Navbar />
